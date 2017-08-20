@@ -1,8 +1,12 @@
 # Integrantes
 Eduardo Kenji
+
 Giovanna Giorgi
+
 Luiz Barros
+
 Lucas de Sá
+
 Nicolas Bacic 
 
 # Objetivo do Projeto
