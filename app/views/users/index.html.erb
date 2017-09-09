@@ -2,6 +2,11 @@
 
 <h1>Users</h1>
 
+<% if @users.empty? %>
+<p>
+  No users registrered.
+</p>
+<% else %>
 <table>
   <thead>
     <tr>
@@ -23,6 +28,7 @@
     <% end %>
   </tbody>
 </table>
+<% end %>
 
 <br>
 
