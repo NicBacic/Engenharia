@@ -21,9 +21,6 @@ Ainda a decidir.
 # Converalls
 [![Coverage Status](https://coveralls.io/repos/github/NickBacic/Engenharia/badge.svg?branch=master)](https://coveralls.io/github/NickBacic/Engenharia?branch=master)
 
-# Heroku
-https://murmuring-inlet-68327.herokuapp.com
-
 # Heroku Novo:
 https://engenharia-ach2006.herokuapp.com/
 
