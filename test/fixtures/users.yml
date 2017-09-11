@@ -9,3 +9,8 @@ two:
   username: MyString
   password: MyString
   first_name: MyString
+
+three:
+  username: MyString
+  password: MyString
+  first_name: MyString
