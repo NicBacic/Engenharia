@@ -25,16 +25,17 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    #test
     respond_to do |format|
-      #@user.first_name.capitalize!
-      #@user.last_name.capitalize!
-
-      #if !@user.email.include? '@'
-       # @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
-       # format.json {render json: @user.errors, status: :unprocessable_entity }
-
-      if @user.save
+      if @user.password.length < 4 or @user.username.length < 4
+	format.html { render :new }
+        @user.errors.add('Invalid field:', 'Username or password is too short (less than 4 characters)')
+        format.json { render json: @user.errors, status: :unprocessable_entity}
+      elsif @user.username == @user.password
+        format.html { render :new }
+        @user.errors.add('Invalid field:', 'Username and password cannot be the same.')
+        format.json { render json: @user.errors, status: :unprocessable_entity}
+      elsif @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -77,6 +78,5 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:username, :password)
-      #user_params.require(:user).permit(:username, :password, :first_name, :last_name, :email)
     end
 end
