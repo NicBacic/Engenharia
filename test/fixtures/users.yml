@@ -4,13 +4,19 @@ one:
   username: MyString
   password: MyString
   first_name: MyString
+  last_name: MyString
+  email: MyString
 
 two:
   username: MyString
   password: MyString
   first_name: MyString
+  last_name: MyString
+  email: MyString
 
 three:
   username: MyString
   password: MyString
   first_name: MyString
+  last_name: MyString
+  email: MyString
