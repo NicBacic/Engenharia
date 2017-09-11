@@ -30,11 +30,11 @@ class UsersController < ApplicationController
       #@user.first_name.capitalize!
       #@user.last_name.capitalize!
 
-      if !@user.email.include? '@'
-        @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
-        format.json {render json: @user.errors, status: :unprocessable_entity }
+      #if !@user.email.include? '@'
+       # @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
+       # format.json {render json: @user.errors, status: :unprocessable_entity }
 
-      elsif @user.save
+      if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
