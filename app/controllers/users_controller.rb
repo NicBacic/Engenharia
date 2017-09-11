@@ -31,7 +31,6 @@ class UsersController < ApplicationController
       @user.last_name.capitalize!
 
       if !@user.email.include? '@'
-        format.html { render :new }
         @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
         format.json {render json: @user.errors, status: :unprocessable_entity }
 
