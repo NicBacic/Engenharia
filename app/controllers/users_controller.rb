@@ -27,8 +27,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      @user.first_name.capitalize!
-      @user.last_name.capitalize!
+      #@user.first_name.capitalize!
+      #@user.last_name.capitalize!
 
       if !@user.email.include? '@'
         @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
