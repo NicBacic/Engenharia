@@ -25,8 +25,13 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    #test
     respond_to do |format|
+      #@user.first_name.capitalize!
+      #@user.last_name.capitalize!
+
+      #if !@user.email.include? '@'
+        # @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
+        # format.json {render json: @user.errors, status: :unprocessable_entity }
       if @user.password.length < 4 or @user.username.length < 4
 	format.html { render :new }
         @user.errors.add('Invalid field:', 'Username or password is too short (less than 4 characters)')
