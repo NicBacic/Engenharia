@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'users/login'
 
+  get 'searchs/search'
+
   resources :users
   root 'static_pages#home'
 end
