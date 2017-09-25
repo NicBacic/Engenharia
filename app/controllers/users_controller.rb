@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   # GET /users/login
   def login
-    @user = User(user_params)
     errorType = ''
     errorInfo = ''
     if @user.username != 'pipi'
