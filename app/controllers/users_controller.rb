@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users/login
   def login
-    
+    errorType = ''
+    errorInfo = ''
   end
 
   # GET /users
