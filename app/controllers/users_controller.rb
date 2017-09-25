@@ -1,6 +1,22 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # GET /users/login
+  def login
+    @user = User(user_params)
+    errorType = ''
+    errorInfo = ''
+    if @user.username != 'pipi'
+      errorType = 'Invalid username'
+      errorInfo = 'Username not registered'
+    end
+    if errorType != ''
+      format.html { render :new }
+      @user.errors.add(errorType, errorInfo)
+      format.json { render json: @user.errors, status: :unprocessable_entity}
+    end
+  end
+
   # GET /users
   # GET /users.json
   def index
