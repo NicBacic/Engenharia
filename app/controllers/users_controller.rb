@@ -3,17 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users/login
   def login
-    errorType = ''
-    errorInfo = ''
-    if @user.username != 'pipi'
-      errorType = 'Invalid username'
-      errorInfo = 'Username not registered'
-    end
-    if errorType != ''
-      format.html { render :new }
-      @user.errors.add(errorType, errorInfo)
-      format.json { render json: @user.errors, status: :unprocessable_entity}
-    end
+    
   end
 
   # GET /users
