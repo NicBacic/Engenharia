@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   resources :items
   get 'static_pages/home'
 
@@ -6,10 +8,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  get 'users/login'
-
   get 'searchs/search'
 
+  get 'devise/shared/link'
+
   resources :users
+
   root 'static_pages#home'
 end

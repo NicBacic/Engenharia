@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  # GET /users/login
-  def login
-    errorType = ''
-    errorInfo = ''
-  end
-
   # GET /users
   # GET /users.json
   def index
@@ -38,7 +32,7 @@ class UsersController < ApplicationController
       #if !@user.email.include? '@'
         # @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
         # format.json {render json: @user.errors, status: :unprocessable_entity }
-      
+
       errorType = ''
       errorInfo = ''
       if @user.password.length < 4 or @user.username.length < 4
