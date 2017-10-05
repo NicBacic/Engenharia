@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @jogo.nome %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @jogo.publisher %>
+</p>
+
+<p>
+  <strong>Desenvolvedora:</strong>
+  <%= @jogo.desenvolvedora %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @jogo.preco %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @jogo.rating %>
+</p>
+
+<p>
+  <strong>Idaderecomendada:</strong>
+  <%= @jogo.idadeRecomendada %>
+</p>
+
+<%= link_to 'Edit', edit_jogo_path(@jogo) %> |
+<%= link_to 'Back', jogos_path %>
