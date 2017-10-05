@@ -4,7 +4,7 @@ class JogosController < ApplicationController
   # GET /jogos
   # GET /jogos.json
   def index
-    @jogos = Jogo.all
+    @jogos = Jogo.search(params[:term])
   end
 
   # GET /jogos/1
@@ -69,6 +69,6 @@ class JogosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jogo_params
-      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :preco, :rating, :idadeRecomendada)
+      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :preco, :rating, :idadeRecomendada,:term)
     end
 end

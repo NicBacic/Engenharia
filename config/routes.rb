@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :jogos
+  
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get 'jogos/jogo'
 
   resources :users
+  resources :jogos
+
   root 'static_pages#home'
 end
