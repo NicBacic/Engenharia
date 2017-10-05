@@ -24,16 +24,13 @@ class JogosController < ApplicationController
   # POST /jogos
   # POST /jogos.json
   def create
-    @jogo = Jogo.new(jogo_params)
+    @jogo = Jogo.new jogo_params
 
-    respond_to do |format|
-      if @jogo.save
-        format.html { redirect_to @jogo, notice: 'Jogo was successfully created.' }
-        format.json { render :show, status: :created, location: @jogo }
-      else
-        format.html { render :new }
-        format.json { render json: @jogo.errors, status: :unprocessable_entity }
-      end
+    if @jogo.save
+      flash[:notice] = 'Jogo adicionado com sucesso!'
+      redirect_to @jogo
+    else
+      render :new
     end
   end
 
