@@ -40,25 +40,23 @@ class JogosController < ApplicationController
   # PATCH/PUT /jogos/1
   # PATCH/PUT /jogos/1.json
   def update
-    respond_to do |format|
-      if @jogo.update(jogo_params)
-        format.html { redirect_to @jogo, notice: 'Jogo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @jogo }
-      else
-        format.html { render :edit }
-        format.json { render json: @jogo.errors, status: :unprocessable_entity }
-      end
+    @jogo = Jogo.find params[:id]
+    
+    if @jogo.update jogo_params
+      flash[:notice] = 'Jogo atualizado com sucesso!'
+      redirect_to @jogo
+    else
+      render :edit
     end
   end
 
   # DELETE /jogos/1
   # DELETE /jogos/1.json
   def destroy
+    @jogo = Jogo.find params[:id]
     @jogo.destroy
-    respond_to do |format|
-      format.html { redirect_to jogos_url, notice: 'Jogo was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice] = 'Jogo excluído com sucesso!'
+    redirect_to @jogo
   end
 
   private
