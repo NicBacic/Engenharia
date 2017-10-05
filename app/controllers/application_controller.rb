@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
-
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  protected
-
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:name, :email) }
-    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :password_confirmation, :current_password ) }
+  def hello
+    a = 2
+    b = 3
+    c = a + b
+    d = a * b
+    render html: "Soma de a + b = #{c} e o valor do produto a * b = #{d}"
   end
 end
