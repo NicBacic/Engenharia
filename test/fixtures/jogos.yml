@@ -4,14 +4,10 @@ one:
   nome: MyString
   publisher: MyString
   desenvolvedora: MyString
-  preco: 9.99
   rating: 1.5
-  idadeRecomendada: 1
 
 two:
   nome: MyString
   publisher: MyString
   desenvolvedora: MyString
-  preco: 9.99
   rating: 1.5
-  idadeRecomendada: 1

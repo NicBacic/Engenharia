@@ -64,6 +64,6 @@ class JogosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jogo_params
-      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :preco, :rating, :idadeRecomendada,:term)
+      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :rating, :term)
     end
 end
