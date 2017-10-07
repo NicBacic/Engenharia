@@ -4,7 +4,12 @@ class JogosController < ApplicationController
   # GET /jogos
   # GET /jogos.json
   def index
-    @jogos = Jogo.search(params[:term])
+    @jogos = Jogo.all
+    if params[:term]
+      @jogos = Jogo.search(params[:term]).order("nome ASC")
+    else
+      @jogos = Jogo.all.order('nome ASC')
+    end
   end
 
   # GET /jogos/1
