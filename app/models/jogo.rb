@@ -2,8 +2,7 @@ class Jogo < ApplicationRecord
 
   def self.search(term)
     if term
-      term.downcase
-      where('nome LIKE ?', "%#{term}%")
+      where('lower(nome) LIKE ?', "%#{term}%".downcase)
       #order('nome ASC')
     else
       order('nome ASC')
