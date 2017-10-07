@@ -34,7 +34,7 @@ class JogosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update jogo" do
-    patch jogo_url(@jogo), params: { jogo: { desenvolvedora: @jogo.desenvolvedora, idadeRecomendada: @jogo.idadeRecomendada, nome: @jogo.nome, preco: @jogo.preco, publisher: @jogo.publisher, rating: @jogo.rating } }
+    patch jogo_url(@jogo), params: { jogo: { desenvolvedora: @jogo.desenvolvedora, nome: @jogo.nome, publisher: @jogo.publisher, rating: @jogo.rating } }
     assert_redirected_to jogo_url(@jogo)
   end
 
