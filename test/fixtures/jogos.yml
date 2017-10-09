@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  publisher: MyString
+  desenvolvedora: MyString
+  rating: 1.5
+
+two:
+  nome: MyString
+  publisher: MyString
+  desenvolvedora: MyString
+  rating: 1.5

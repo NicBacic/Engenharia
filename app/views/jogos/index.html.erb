@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jogos</h1>
+
+<%= form_tag(jogos_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term], :id => "search_box" %>
+  <%= submit_tag "Search", nome: nil, :id => "search_button" %>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Publisher</th>
+      <th>Desenvolvedora</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jogos.each do |jogo| %>
+      <tr>
+        <td><%= jogo.nome %></td>
+        <td><%= jogo.publisher %></td>
+        <td><%= jogo.desenvolvedora %></td>
+        <td><%= jogo.rating %></td>
+        <td><%= link_to 'Show', jogo %></td>
+        <td><%= link_to 'Edit', edit_jogo_path(jogo) %></td>
+        <td><%= link_to 'Destroy', jogo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jogo', new_jogo_path %>

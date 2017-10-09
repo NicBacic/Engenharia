@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :items
+
+  root 'static_pages#home'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -8,8 +10,8 @@ Rails.application.routes.draw do
 
   get 'users/login'
 
-  get 'searchs/search'
-
   resources :users
-  root 'static_pages#home'
+  resources :jogos
+
+  
 end
