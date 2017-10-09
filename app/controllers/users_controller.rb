@@ -31,7 +31,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.password = params[:user][:password]
     respond_to do |format|
       #@user.first_name.capitalize!
       #@user.last_name.capitalize!
