@@ -16,8 +16,4 @@ Rails.application.routes.draw do
 
   resources :users
   resources :jogos
-<<<<<<< HEAD
-=======
-  
->>>>>>> e0d0b2fad9ee565f17335521b1b90855b8af716a
 end
