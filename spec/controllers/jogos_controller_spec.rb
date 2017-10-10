@@ -76,7 +76,12 @@ RSpec.describe JogosController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          nome:"The Legend of Zelda: Ocarina of Time",
+          publisher:"Nintendo",
+          desenvolvedora:"Nintendo EPD",
+          rating:"5" 
+        }
       }
 
       it "updates the requested jogo" do
