@@ -8,8 +8,16 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  get 'users/login'
+  get 'sessions/new'
+
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   resources :users
   resources :jogos
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e0d0b2fad9ee565f17335521b1b90855b8af716a
 end
