@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171009202920) do
+ActiveRecord::Schema.define(version: 20171017220635) do
+
+  create_table "items", force: :cascade do |t|
+    t.string "nome"
+    t.string "descricao"
+    t.decimal "preco"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
+    t.decimal "preco"
     t.float "rating"
+    t.integer "idadeRecomendada"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +41,14 @@ ActiveRecord::Schema.define(version: 20171009202920) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "usuario_avalia_jogos", force: :cascade do |t|
+    t.integer "id_user"
+    t.integer "id_jogo"
+    t.integer "avaliacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

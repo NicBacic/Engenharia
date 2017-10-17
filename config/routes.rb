@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+
+  resources :usuario_avalia_jogos
   resources :reviews
+  
   root 'static_pages#home'
 
   get 'static_pages/home'
