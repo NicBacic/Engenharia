@@ -39,4 +39,6 @@
 
 
 <%= link_to 'Edit', edit_jogo_path(@jogo) %> |
+<%= link_to 'Submit Review', new_review_path(@review) %> |
+<%= link_to 'See Reviews', review_path(:param1 => @jogo.nome) %> |
 <%= link_to 'Back', jogos_path %>

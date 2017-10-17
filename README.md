@@ -10,7 +10,8 @@ Lucas de Sá
 Nicolas Bacic 
 
 # Objetivo do Projeto
-Ainda a decidir.
+O software como serviço desenvolvido nesse projeto pretende funcionar de modo semelhante como https://myanimelist.net/ 
+O foco, entretanto, será em jogos. Dessa forma pretendemos desenvolver uma plataforma onde diferentes usuários conseguem compartilhar a experiência que tiveram em diferentes jogos através de reviews, fórums, ratings, entre outras ferramentas. 
 
 # Code Climate
 <a href="https://codeclimate.com/github/NickBacic/Engenharia"><img src="https://codeclimate.com/github/NickBacic/Engenharia/badges/gpa.svg" /></a> <a href="https://codeclimate.com/github/NickBacic/Engenharia/coverage"><img src="https://codeclimate.com/github/NickBacic/Engenharia/badges/coverage.svg" /></a>
@@ -23,6 +24,9 @@ Ainda a decidir.
 
 # Heroku Novo:
 https://engenharia-ach2006.herokuapp.com/
+
+# Pivotal
+https://www.pivotaltracker.com/n/projects/2115363#
 
 # Engenharia
 Repositório de código do projeto de engenharia de software
