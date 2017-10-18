@@ -12,21 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20171017220635) do
 
-  create_table "items", force: :cascade do |t|
-    t.string "nome"
-    t.string "descricao"
-    t.decimal "preco"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
-    t.decimal "preco"
     t.float "rating"
-    t.integer "idadeRecomendada"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +31,7 @@ ActiveRecord::Schema.define(version: 20171017220635) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

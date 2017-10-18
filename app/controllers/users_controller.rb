@@ -26,12 +26,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     respond_to do |format|
-      #@user.first_name.capitalize!
-      #@user.last_name.capitalize!
-
-      #if !@user.email.include? '@'
-        # @user.errors.add('Invalid email: ', 'Email needs to contain @ character')
-        # format.json {render json: @user.errors, status: :unprocessable_entity }
+   
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
@@ -70,6 +65,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password, :password_digest)
     end
 end
