@@ -1,14 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nome do jogo:</strong>
-  <%= @review.nome_do_jogo %>
-</p>
-
-<p>
-  <strong>Review:</strong>
-  <%= @review.texto %>
-</p>
-
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', jogo_path %>
+<h2> <%= @review.id %> </h2>
+<p> <%= @review.body %> </p>

@@ -2,15 +2,15 @@ Rails.application.routes.draw do
 
 
   resources :usuario_avalia_jogos
-  resources :reviews
   
-  root 'static_pages#home'
+  root 'static_pages#home', as: 'home'
 
   get 'static_pages/home'
+  get 'help' => 'static_pages#help'
+  get 'about' => 'static_pages#about'
 
-  get 'static_pages/help'
-
-  get 'static_pages/about'
+  get '/reviews/index'
+  get '/reviews/new'
 
   get 'sessions/new'
 
@@ -19,5 +19,11 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
-  resources :jogos
+  resources :reviews
+  
+  resources :jogos do
+    resources :reviews
+  end
+
+
 end
