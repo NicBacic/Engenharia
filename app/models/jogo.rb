@@ -1,5 +1,6 @@
 class Jogo < ApplicationRecord
   has_many :usuarioAvaliaJogos
+  has_many :reviews
   def self.search(term)
     if term
       where('lower(nome) LIKE ?', "%#{term}%".downcase)
