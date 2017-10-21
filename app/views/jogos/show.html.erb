@@ -41,18 +41,21 @@
 <%= link_to 'Back', jogos_path %>
 
 <h3>Reviews</h3>
-<% @jogo.reviews.each do |reviews| %>
-  <p>
-    <b>Review:</b>
-    <%= reviews.body %>
-  </p>
+<% if @jogo.present? %>
+	<% @jogo.reviews.each do |reviews| %>
+	  <p>
+	    <b>Review:</b>
+	      <%= reviews.texto %>
+	  </p>
+	<% end %>
 <% end %>
+
 
 <h3>Add Review</h3>
 <%= form_for ([@jogo, @jogo.reviews.build])do |f| %>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto, id: :review_texto %>
   </div>
   <div class="actions">
     <%= f.submit %>

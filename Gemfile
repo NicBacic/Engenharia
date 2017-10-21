@@ -12,6 +12,8 @@ gem 'jbuilder', '2.7.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'coveralls', require: false
 gem 'foreigner', require: 'active_support'
+gem 'bootstrap-sass', '3.3.7'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
