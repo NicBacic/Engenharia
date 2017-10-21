@@ -15,6 +15,8 @@ class JogosController < ApplicationController
   # GET /jogos/1
   # GET /jogos/1.json
   def show
+    @jogo = Jogo.find(params[:id])
+    # add this line below...
   end
 
   # GET /jogos/new

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id user:</strong>
+  <%= @usuario_avalia_jogo.id_user %>
+</p>
+
+<p>
+  <strong>Id jogo:</strong>
+  <%= @usuario_avalia_jogo.id_jogo %>
+</p>
+
+<p>
+  <strong>Avaliacao:</strong>
+  <%= @usuario_avalia_jogo.avaliacao %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_avalia_jogo_path(@usuario_avalia_jogo) %> |
+<%= link_to 'Back', usuario_avalia_jogos_path %>

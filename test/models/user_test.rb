@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  #def setup
-  #  @user = User.new(username: "Batata", password: "Sokoro")
+  def setup
+    @user = User.new(username: "Batata", password: "Sokoro", password_digest: "Sokoro")
   #  @user = User.new(username: "Noot", password: "Lewt")
   #  @user = User.new(username: "Qisso", password: "Welp")
-  #end
+  end
 end

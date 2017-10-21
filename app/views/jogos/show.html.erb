@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @jogo.nome %>
-</p>
+<h2> <%= @jogo.nome %> </h2>
 
 <p>
   <strong>Publisher:</strong>
@@ -20,6 +17,47 @@
   <%= @jogo.rating %>
 </p>
 
+<p>
+  <strong> Avaliar:</strong>
+  <select>
+    <option value="-"> - </option>
+    <option value="10">(10) Masterpiece</option>
+    <option value="9">(9) Great</option>
+    <option value="8">(8) Very Good</option>
+    <option value="7">(7) Good</option>
+    <option value="6">(6) Fine</option>
+    <option value="5">(5) Average</option>
+    <option value="4">(4) Bad</option>
+    <option value="3">(3) Very Bad</option>
+    <option value="2">(2) Horrible</option>
+    <option value="1">(1) Pure Trash</option>
+
+  </select>
+</p>
+
 
 <%= link_to 'Edit', edit_jogo_path(@jogo) %> |
+
 <%= link_to 'Back', jogos_path %>
+
+<h3>Reviews</h3>
+<% if @jogo.present? %>
+	<% @jogo.reviews.each do |reviews| %>
+	  <p>
+	    <b>Review:</b>
+	      <%= reviews.texto %>
+	  </p>
+	<% end %>
+<% end %>
+
+
+<h3>Add Review</h3>
+<%= form_for ([@jogo, @jogo.reviews.build])do |f| %>
+  <div class="field">
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto, id: :review_texto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
