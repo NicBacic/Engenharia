@@ -19,6 +19,9 @@
         null,
         null,
         1,
+        1,
+        null,
+        1,
         null,
         null,
         null,
@@ -86,9 +89,7 @@
         1,
         0,
         0,
-        0,
-        0,
-        0,
+        null,
         null,
         null
       ],
@@ -514,6 +515,7 @@
         1,
         1,
         1,
+        1,
         0,
         0,
         null,
@@ -523,8 +525,13 @@
         null,
         null,
         null
+      ],
+      "/home/nicbacic/ruby/hello_world/app/models/review.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1508366345
+    "timestamp": 1508546315
   }
 }
