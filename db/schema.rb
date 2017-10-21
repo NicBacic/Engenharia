@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20171017220635) do
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
+<<<<<<< Updated upstream
     t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,6 +25,9 @@ ActiveRecord::Schema.define(version: 20171017220635) do
   create_table "reviews", force: :cascade do |t|
     t.string "texto"
     t.string "nome_do_jogo"
+=======
+    t.decimal "rating"
+>>>>>>> Stashed changes
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
