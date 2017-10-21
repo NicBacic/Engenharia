@@ -2776,13 +2776,13 @@ Tag.create!([
 
 p "Created #{Tag.count} tags"
 
-#Jogos_tags.destroy_all
+Jogos_tags.destroy_all
 
-#Jogos_tags.create!([
- # {
-  #  jogo_id: 1,
-  #  tag_id: 1
- #   }
- # ])
+Jogos_tags.create!([
+  {
+    jogo_id: 1,
+    tag_id: 1
+    }
+  ])
 
-#p "Created #{Jogos_tags.count} jogos_tags"
+p "Created #{Jogos_tags.count} jogos_tags"

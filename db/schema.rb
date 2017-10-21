@@ -10,20 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008144901) do
-
-  create_table "Jogos_Tags", id: false, force: :cascade do |t|
-    t.integer "Jogo_id", null: false
-    t.integer "Tag_id", null: false
-  end
-
-  create_table "items", force: :cascade do |t|
-    t.string "nome"
-    t.string "descricao"
-    t.decimal "preco"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20171021133352) do
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
@@ -32,6 +19,13 @@ ActiveRecord::Schema.define(version: 20171008144901) do
     t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "jogos_tags", id: false, force: :cascade do |t|
+    t.integer "jogo_id", null: false
+    t.integer "tag_id", null: false
+    t.index ["jogo_id"], name: "index_jogos_tags_on_jogo_id"
+    t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
