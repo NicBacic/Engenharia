@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tags
 
   resources :usuario_avalia_jogos
   
