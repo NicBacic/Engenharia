@@ -7,7 +7,7 @@ class CreateUsuarioAvaliaJogos < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-  add_foreign_key :usuarioAvaliaJogos, :users
-  add_foreign_key :usuarioAvaliaJogos, :jogos
+  add_foreign_key :usuarioAvaliaJogos, :users, column: :id_user
+  add_foreign_key :usuarioAvaliaJogos, :jogos, column: :id_jogo
   end
 end
