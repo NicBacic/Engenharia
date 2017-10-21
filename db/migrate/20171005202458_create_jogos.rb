@@ -4,7 +4,7 @@ class CreateJogos < ActiveRecord::Migration[5.1]
       t.string :nome
       t.string :publisher
       t.string :desenvolvedora
-      t.float :rating
+      t.decimal :rating
 
       t.timestamps
     end
