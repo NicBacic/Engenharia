@@ -17,7 +17,6 @@ class JogosController < ApplicationController
   def show
     @jogo = Jogo.find(params[:id])
     # add this line below...
-    @review = Review.new
   end
 
   # GET /jogos/new
