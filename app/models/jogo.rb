@@ -1,5 +1,5 @@
 class Jogo < ApplicationRecord
-  validates :rating, numericality: {greater_than: 0, less_than_or_equal_to: 10}
+  validates :rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}
 
   has_many :usuarioAvaliaJogos
   has_many :reviews
