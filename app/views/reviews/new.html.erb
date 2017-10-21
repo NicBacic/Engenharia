@@ -1,5 +1,12 @@
-<h1>New Review</h1>
+<h1> Add review </h1>
+<%= form_for :review, url: reviews_path do |f| %>
 
-<%= render 'form', review: @review %>
+  <p class="field">
+    <%= f.label :texto %>
+    <%= f.text_field :texto%>
+  </p>
 
-<%= link_to 'Back', jogos_path %>
+  <p class="actions">
+    <%= f.submit %>
+  </p>
+<% end %>

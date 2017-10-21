@@ -5,4 +5,5 @@ class User < ApplicationRecord
 
   has_secure_password
   has_many :usuarioAvaliaJogos
+  has_many :reviews
 end
