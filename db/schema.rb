@@ -10,15 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020233554) do
+ActiveRecord::Schema.define(version: 20171021133352) do
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
-    t.float "rating"
+    t.decimal "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "jogos_tags", id: false, force: :cascade do |t|
+    t.integer "jogo_id", null: false
+    t.integer "tag_id", null: false
+    t.index ["jogo_id"], name: "index_jogos_tags_on_jogo_id"
+    t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -29,10 +36,21 @@ ActiveRecord::Schema.define(version: 20171020233554) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
     t.string "password_digest"
+    t.string "email"
+    t.string "activation_digest"
+    t.boolean "activated"
+    t.datetime "activated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

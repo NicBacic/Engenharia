@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tags
 
   resources :usuario_avalia_jogos
   
@@ -12,8 +13,6 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
 
   get '/reviews/new'
-
-  get 'sessions/new'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

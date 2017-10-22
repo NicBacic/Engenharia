@@ -7,7 +7,7 @@ class Reviews < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-  add_foreign_key :reviews, :users
-  add_foreign_key :reviews, :jogos
+  add_foreign_key :reviews, :users, column: :user_id
+  add_foreign_key :reviews, :jogos, column: :jogo_id
   end
 end
