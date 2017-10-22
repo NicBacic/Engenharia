@@ -29,8 +29,6 @@ class User < ApplicationRecord
     self.reset_token = User.new_token
     update_attribute(:reset_digest, User.digest(reset_token))
     update_attribute(:reset_sent_at, Time.zone.now)
-    #self.reset_digest = User.digest(reset_token)
-    #self.reset_sent_at = Time.zone.now
   end
 
   # Sends password reset email.
