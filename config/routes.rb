@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   resources :tags
 
   resources :usuario_avalia_jogos
@@ -20,6 +24,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :reviews
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :account_activations, only: [:edit]
   
   resources :jogos do
     resources :reviews
