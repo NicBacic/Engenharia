@@ -1,0 +1,6 @@
+Hi <%= @user.username %>,
+
+Welcome to Rotten Pixels! Click on the link below or paste it on your browser to activate your account:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
