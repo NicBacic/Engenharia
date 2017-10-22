@@ -25,7 +25,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'web-console', '3.5.1'
   gem 'listen', '3.0.8'
   gem 'spring'
