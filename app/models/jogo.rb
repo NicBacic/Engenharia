@@ -1,10 +1,5 @@
 class Jogo < ApplicationRecord
 
-  has_many :jogo_tags
-  has_many :jogos, :through => :jogo_tags
-
-  validates :rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}
-
   has_many :usuarioAvaliaJogos
   has_many :reviews
   def self.search(term)

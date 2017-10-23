@@ -5,11 +5,7 @@ class JogosController < ApplicationController
   # GET /jogos.json
   def index
     @jogos = Jogo.all
-    if params[:term]
-      @jogos = Jogo.search(params[:term]).order("nome ASC")
-    else
-      @jogos = Jogo.all.order('nome ASC')
-    end
+    params[:term] ? @jogos = Jogo.search(params[:term]).order("nome ASC") : @jogos = Jogo.all.order('nome ASC')
   end
 
   # GET /jogos/1
@@ -18,6 +14,7 @@ class JogosController < ApplicationController
     @jogo = Jogo.find(params[:id])
     # add this line below...
   end
+
 
   # GET /jogos/new
   def new

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :tags
-
-  resources :usuario_avalia_jogos
-  
   root 'static_pages#home', as: 'home'
 
   get 'static_pages/home'
@@ -13,6 +9,7 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
 
   get '/reviews/new'
+  get '/usuario_avalia_jogos/new'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -20,9 +17,11 @@ Rails.application.routes.draw do
 
   resources :users
   resources :reviews
-  
+  resources :usuario_avalia_jogos
+
   resources :jogos do
     resources :reviews
+    resources :usuario_avalia_jogos
   end
 
 
