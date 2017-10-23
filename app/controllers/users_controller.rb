@@ -41,13 +41,17 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    if @user.update(user_params)
-      flash[:notice] = 'Usuário atualizado com sucesso!'
-      redirect_to @user
-    else
-      flash[:notice] = 'Ocorreu um erro!'
-      render :edit
-    end
+   
+    #respond_to do |format|
+
+      if @user.update(user_params)
+        flash[:notice] = 'Usuário atualizado com sucesso!'
+        redirect_to @user
+      else
+        flash[:notice] = 'Ocorreu um erro!'
+        render :edit
+      end
+    #end
   end
 
   # DELETE /users/1
