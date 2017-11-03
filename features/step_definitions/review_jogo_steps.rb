@@ -1,5 +1,5 @@
 Given /^I am signed as user "([^"]*)"$/ do |user_name|
-  pending
+  skip_this_scenario
   user = User.find_by_username(user_name)
   visit login_path
   puts page.html
@@ -10,12 +10,10 @@ Given /^I am signed as user "([^"]*)"$/ do |user_name|
 end
 
 When /^I go to Jogo page "([^"]*)"$/ do |jogo_name|
-  pending
   visit "/jogos/3"
 end
 
 When /^I fill "([^"]*)" with "([^"]*)"$/ do |review_text_area, review_name|
-  pending
   puts page.html
   fill_in "review_text_area", :with=> review_name, visible: false
   
