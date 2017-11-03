@@ -444,6 +444,7 @@
         null,
         null,
         1,
+        1,
         null,
         null,
         null,
@@ -1239,6 +1240,14 @@
         null,
         null
       ],
+      "/home/nicbacic/ruby/hello_world/app/models/review.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/home/nicbacic/ruby/hello_world/app/mailers/user_mailer.rb": [
         1,
         null,
@@ -1272,6 +1281,6 @@
         null
       ]
     },
-    "timestamp": 1508725997
+    "timestamp": 1509751321
   }
 }

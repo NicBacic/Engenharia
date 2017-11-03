@@ -16,20 +16,20 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
 
-  get '/reviews/new'
+  #get '/reviews/new'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
-  resources :reviews
+  #resources :reviews
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :account_activations, only: [:edit]
   
   resources :jogos do
-    resources :reviews
+
+    resources :reviews, only: [:create, :new]
+
   end
-
-
 end
