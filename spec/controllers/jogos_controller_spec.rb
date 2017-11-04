@@ -87,6 +87,7 @@ RSpec.describe JogosController, type: :controller do
           nome:"CS:GO",
           publisher:"Valve",
           desenvolvedora:"Valve",
+          console:"PC",
           rating: "9"     
         }
       }
