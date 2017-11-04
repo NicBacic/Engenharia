@@ -3,10 +3,9 @@ class Jogo < ApplicationRecord
   has_many :jogo_tags
   #has_many :jogos, :through => :jogo_tags
 
-  validates :rating, numericality: {only_integer: true, greater_than: -1, less_than_or_equal_to: 10}, allow_blank: true 
+  validates :rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}, allow_blank: true 
   validates :nome, presence: true
   validates :desenvolvedora, presence: true
-  validates :publisher, presence: true
 
   has_many :usuarioAvaliaJogos
   has_many :reviews
