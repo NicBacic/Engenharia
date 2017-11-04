@@ -103,6 +103,7 @@ RSpec.describe JogosController, type: :controller do
         expect(jogo.nome).to eql "CS:GO"
         expect(jogo.publisher).to eql "Valve"
         expect(jogo.desenvolvedora).to eql "Valve"
+        expect(jogo.console).to eql "PC"
         #expect(@jogo.rating).to eql new_attributes[:rating]
       end
 
