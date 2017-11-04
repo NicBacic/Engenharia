@@ -9,6 +9,7 @@ RSpec.describe JogosController, type: :controller do
       nome:"The Legend of Zelda: Breath of the Wild",
       publisher:"Nintendo",
       desenvolvedora:"Nintendo EPD",
+      console:"Switch",
       rating: "5"     
     }
   }
@@ -18,6 +19,7 @@ RSpec.describe JogosController, type: :controller do
       nome: "*****",
       publisher:"??????",
       desenvolvedora:"??????",
+      console:"??????",
       rating:"ABC" 
     }
   }
