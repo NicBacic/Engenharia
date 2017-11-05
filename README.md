@@ -22,6 +22,8 @@ O foco, entretanto, será em jogos. Dessa forma pretendemos desenvolver uma plat
 # Coveralls
 [![Coverage Status](https://coveralls.io/repos/github/NickBacic/Engenharia/badge.svg?branch=master)](https://coveralls.io/github/NickBacic/Engenharia?branch=master)
 
+[![Coverage Status](https://coveralls.io/repos/github/NickBacic/Engenharia/badge.svg?branch=master)](https://coveralls.io/github/NickBacic/Engenharia?branch=master)
+
 # Heroku Novo:
 https://engenharia-ach2006.herokuapp.com/
 
