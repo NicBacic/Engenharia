@@ -17,7 +17,7 @@ class JogosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create jogo" do
     assert_difference('Jogo.count') do
-      post jogos_url, params: { jogo: { desenvolvedora: @jogo.desenvolvedora, nome: @jogo.nome, publisher: @jogo.publisher, rating: @jogo.rating } }
+      post jogos_url, params: { jogo: { nome: "Zelda", publisher: "Nintendo", desenvolvedora: "Nintendo", rating: "5" } }
     end
 
     assert_redirected_to jogo_url(Jogo.last)
@@ -34,8 +34,8 @@ class JogosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update jogo" do
-    patch jogo_url(@jogo), params: { jogo: { desenvolvedora: @jogo.desenvolvedora, nome: @jogo.nome, publisher: @jogo.publisher, rating: @jogo.rating } }
-    assert_redirected_to jogo_url(@jogo)
+    patch jogo_url(@jogo), params: { jogo: {nome: @jogo.nome, publisher: @jogo.publisher, desenvolvedora: @jogo.desenvolvedora, rating: @jogo.rating } }
+    assert_response :success
   end
 
   test "should destroy jogo" do

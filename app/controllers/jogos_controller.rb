@@ -31,6 +31,7 @@ class JogosController < ApplicationController
   # POST /jogos
   # POST /jogos.json
   def create
+    
     @jogo = Jogo.new jogo_params
 
     if @jogo.save
