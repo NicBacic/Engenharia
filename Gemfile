@@ -15,6 +15,7 @@ gem 'foreigner', require: 'active_support'
 gem 'bootstrap-sass', '3.3.7'
 gem 'devise'
 
+
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug','9.0.6',platform: :mri
@@ -22,6 +23,8 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara', '2.15.4'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  #gem 'factory_girl_rails'
 end
 
 group :development do
