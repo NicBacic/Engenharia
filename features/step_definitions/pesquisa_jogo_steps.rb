@@ -1,4 +1,4 @@
-Given(/^I am on the Jogos page$/) do
+Given("I am on the Jogos page") do
   @jogo = FactoryBot.create(:jogo)
   visit jogos_path
 end
