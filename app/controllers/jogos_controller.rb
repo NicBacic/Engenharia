@@ -31,6 +31,7 @@ class JogosController < ApplicationController
   # POST /jogos
   # POST /jogos.json
   def create
+    
     @jogo = Jogo.new jogo_params
 
     if @jogo.save
@@ -71,6 +72,6 @@ class JogosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jogo_params
-      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :rating, :term)
+      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :console, :rating, :term)
     end
 end

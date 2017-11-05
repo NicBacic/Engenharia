@@ -9,12 +9,19 @@ RSpec.describe JogosController, type: :controller do
       nome:"The Legend of Zelda: Breath of the Wild",
       publisher:"Nintendo",
       desenvolvedora:"Nintendo EPD",
-      rating:"5"     
+      console:"Switch",
+      rating: "5"     
     }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      nome: "*****",
+      publisher:"??????",
+      desenvolvedora:"??????",
+      console:"??????",
+      rating:"ABC" 
+    }
   }
 
   
@@ -76,18 +83,33 @@ RSpec.describe JogosController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          nome:"CS:GO",
+          publisher:"Valve",
+          desenvolvedora:"Valve",
+          console:"PC",
+          rating: "9"     
+        }
       }
 
+      #before(:each) do
+        #put :update, :id => @jogo.id, :jogo => new_attributes
+        #@jogo.reload
+      #end
+
       it "updates the requested jogo" do
-        jogo = Jogo.create! valid_attributes
+        jogo = Jogo.create! new_attributes
         put :update, params: {id: jogo.to_param, jogo: new_attributes}, session: valid_session
         jogo.reload
-        skip("Add assertions for updated state")
+        expect(jogo.nome).to eql "CS:GO"
+        expect(jogo.publisher).to eql "Valve"
+        expect(jogo.desenvolvedora).to eql "Valve"
+        expect(jogo.console).to eql "PC"
+        #expect(@jogo.rating).to eql new_attributes[:rating]
       end
 
       it "redirects to the jogo" do
-        jogo = Jogo.create! valid_attributes
+        jogo = Jogo.create! new_attributes
         put :update, params: {id: jogo.to_param, jogo: valid_attributes}, session: valid_session
         expect(response).to redirect_to(jogo)
       end
