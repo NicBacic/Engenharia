@@ -17,7 +17,7 @@ class JogosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create jogo" do
     assert_difference('Jogo.count') do
-      post jogos_url, params: { jogo: { nome: "Zelda", publisher: "Nintendo", desenvolvedora: "Nintendo", console: "Switch", rating: "5" } }
+      post jogos_url, params: { jogo: { nome: "Zelda", publisher: "Nintendo", desenvolvedora: "Nintendo", rating: "5" } }
     end
 
     assert_redirected_to jogo_url(Jogo.last)
