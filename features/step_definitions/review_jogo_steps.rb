@@ -17,7 +17,7 @@ When ("I fill {string} with {string}") do |review_text_area, review_name|
 end
 
 When ("I confirm my review in {string}") do |review_button|
-  click_button 'review_button', visible: false
+  click_button review_button, visible: false
 end
 
 Then ("the game page should have content {string} written by {string}") do |review_name, username|
