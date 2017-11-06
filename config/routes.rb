@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
+  resources :tags
+
+  resources :usuario_avalia_jogos
+
   root 'static_pages#home', as: 'home'
 
   get 'static_pages/home'
@@ -17,7 +25,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :reviews
-  resources :usuario_avalia_jogos
 
   resources :jogos do
     resources :reviews

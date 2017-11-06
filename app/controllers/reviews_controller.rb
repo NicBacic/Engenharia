@@ -19,8 +19,16 @@ class ReviewsController < ApplicationController
     redirect_to @jogo
   end
 
+  private
+
   def review_params
     params.require(:review).permit(:texto).merge(jogo_id: current_jogos.id)
+  end
+
+  private
+
+  def review_params_user
+    params.require(:review).permit(:texto).merge(:jogo_id => current_jogos.id, :user_id => current_user.id)
   end
 
   def show
