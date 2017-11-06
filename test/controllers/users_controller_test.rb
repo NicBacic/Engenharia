@@ -32,6 +32,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  #por que isso da erro?
   test "should update user" do
     patch user_url(@user), params: { user: {username: @user.username, password: @user.password, password_digest: @user.password_digest} }
     assert_response :success
