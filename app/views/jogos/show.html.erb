@@ -46,7 +46,7 @@
 	  <p>
             Created by <%= reviews.created_at.strftime("%b %Y")%> by
 	    <% if reviews.user_id != nil %>
-                <b><%= reviews.user.username %>:</b>
+                <b><%= link_to reviews.user.username, user_path(reviews.user.id) %>:</b>
               <% else %>
                 <b>Anonymous:</b>
               <% end %>
@@ -65,6 +65,6 @@
     <%= f.text_area :texto, id: :review_text_area %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit Review'%>
   </div>
 <% end %>
