@@ -6,21 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Jogo.destroy_all
+#Jogo.destroy_all
 
 Jogo.create!([
   {
   nome: "Title",
   publisher: "Publisher(s)",
   desenvolvedora: "Developer(s)",
-  rating: 0,
-  console: "Switch"
-},
-  {
-  nome: "JP",
-  publisher: "",
-  desenvolvedora: "PAL
-",
   rating: 0,
   console: "Switch"
 },
