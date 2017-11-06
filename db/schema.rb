@@ -22,10 +22,8 @@ ActiveRecord::Schema.define(version: 20171022183000) do
   end
 
   create_table "jogos_tags", id: false, force: :cascade do |t|
-    t.integer "jogo_id", null: false
-    t.integer "tag_id", null: false
-    t.index ["jogo_id"], name: "index_jogos_tags_on_jogo_id"
-    t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
+    t.integer "jogo_id"
+    t.integer "tag_id"
   end
 
   create_table "reviews", force: :cascade do |t|

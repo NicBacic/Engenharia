@@ -25,3 +25,22 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+.table-nonfluid {
+   width: auto !important;
+   margin-left: 5%;
+}
+
+td {
+  border: 1px solid lightgray;
+}
+td > div {
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search {
+  margin-left: 5%
+}
