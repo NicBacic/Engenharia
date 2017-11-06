@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/nicbacic/ruby/hello_world/app/controllers/jogos_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/jogos_controller.rb": [
         1,
         1,
         null,
@@ -80,7 +80,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/controllers/tags_controller_spec.rb": [
+      "/home/lucas/Engenharia/spec/controllers/tags_controller_spec.rb": [
         1,
         null,
         null,
@@ -223,7 +223,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/tags_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/tags_controller.rb": [
         1,
         1,
         null,
@@ -299,7 +299,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/controllers/users_controller_spec.rb": [
+      "/home/lucas/Engenharia/spec/controllers/users_controller_spec.rb": [
         1,
         1,
         1,
@@ -431,7 +431,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/users_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -509,7 +509,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/controllers/usuario_avalia_jogos_controller_spec.rb": [
+      "/home/lucas/Engenharia/spec/controllers/usuario_avalia_jogos_controller_spec.rb": [
         1,
         null,
         null,
@@ -652,7 +652,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/usuario_avalia_jogos_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/usuario_avalia_jogos_controller.rb": [
         1,
         1,
         null,
@@ -728,7 +728,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/helpers/account_activations_helper_spec.rb": [
+      "/home/lucas/Engenharia/spec/helpers/account_activations_helper_spec.rb": [
         1,
         null,
         null,
@@ -745,7 +745,7 @@
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/helpers/tags_helper_spec.rb": [
+      "/home/lucas/Engenharia/spec/helpers/tags_helper_spec.rb": [
         1,
         null,
         null,
@@ -762,7 +762,7 @@
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/helpers/usuario_avalia_jogos_helper_spec.rb": [
+      "/home/lucas/Engenharia/spec/helpers/usuario_avalia_jogos_helper_spec.rb": [
         1,
         null,
         null,
@@ -779,7 +779,7 @@
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/mailers/user_mailer_spec.rb": [
+      "/home/lucas/Engenharia/spec/mailers/user_mailer_spec.rb": [
         1,
         null,
         null,
@@ -814,51 +814,39 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/models/tag_spec.rb": [
+      "/home/lucas/Engenharia/spec/models/tag_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/tag.rb": [
+      "/home/lucas/Engenharia/app/models/tag.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/application_record.rb": [
+      "/home/lucas/Engenharia/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/models/usuario_avalia_jogo_spec.rb": [
+      "/home/lucas/Engenharia/spec/models/usuario_avalia_jogo_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/usuario_avalia_jogo.rb": [
+      "/home/lucas/Engenharia/app/models/usuario_avalia_jogo.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/requests/tags_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/spec/requests/usuario_avalia_jogos_spec.rb": [
+      "/home/lucas/Engenharia/spec/requests/tags_spec.rb": [
         1,
         null,
         1,
@@ -870,48 +858,19 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/routing/tags_routing_spec.rb": [
+      "/home/lucas/Engenharia/spec/requests/usuario_avalia_jogos_spec.rb": [
         1,
         null,
         1,
         1,
-        null,
         1,
         1,
-        null,
-        null,
         1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
         null,
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/routing/usuario_avalia_jogos_routing_spec.rb": [
+      "/home/lucas/Engenharia/spec/routing/tags_routing_spec.rb": [
         1,
         null,
         1,
@@ -952,7 +911,48 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/tags/edit.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/routing/usuario_avalia_jogos_routing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/views/tags/edit.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -975,7 +975,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/tags/index.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/views/tags/index.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -999,7 +999,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/tags/new.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/views/tags/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1022,7 +1022,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/tags/show.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/views/tags/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1040,60 +1040,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/usuario_avalia_jogos/edit.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/spec/views/usuario_avalia_jogos/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/spec/views/usuario_avalia_jogos/new.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/views/usuario_avalia_jogos/edit.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1119,7 +1066,60 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/views/usuario_avalia_jogos/show.html.erb_spec.rb": [
+      "/home/lucas/Engenharia/spec/views/usuario_avalia_jogos/index.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/views/usuario_avalia_jogos/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/views/usuario_avalia_jogos/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1139,7 +1139,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/jogo.rb": [
+      "/home/lucas/Engenharia/app/models/jogo.rb": [
         1,
         null,
         1,
@@ -1165,7 +1165,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/user.rb": [
+      "/home/lucas/Engenharia/app/models/user.rb": [
         1,
         null,
         1,
@@ -1242,7 +1242,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/review.rb": [
+      "/home/lucas/Engenharia/app/models/review.rb": [
         1,
         1,
         1,
@@ -1250,7 +1250,7 @@
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/mailers/user_mailer.rb": [
+      "/home/lucas/Engenharia/app/mailers/user_mailer.rb": [
         1,
         null,
         null,
@@ -1275,7 +1275,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/mailers/application_mailer.rb": [
+      "/home/lucas/Engenharia/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
@@ -1283,6 +1283,6 @@
         null
       ]
     },
-    "timestamp": 1509922886
+    "timestamp": 1509927121
   }
 }
