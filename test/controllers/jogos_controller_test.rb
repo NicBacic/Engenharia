@@ -33,6 +33,7 @@ class JogosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  #nao sabemos porque nao da certo localmente
   test "should update jogo" do
     patch jogo_url(@jogo), params: { jogo: {nome: @jogo.nome, publisher: @jogo.publisher, desenvolvedora: @jogo.desenvolvedora, rating: @jogo.rating } }
     assert_response :success
