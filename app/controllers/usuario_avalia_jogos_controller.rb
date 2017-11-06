@@ -50,7 +50,7 @@ class UsuarioAvaliaJogosController < ApplicationController
   # DELETE /usuario_avalia_jogos/1
   # DELETE /usuario_avalia_jogos/1.json
   def destroy
-    @usuario_avalia_jogo.destroy
+    @usuario_avalia_jogo.destroy(usuario_avalia_jogo_params)
     respond_to do |format|
       format.html { redirect_to usuario_avalia_jogos_url, notice: 'Usuario avalia jogo was successfully destroyed.' }
       format.json { head :no_content }

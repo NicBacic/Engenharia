@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @reviews = @user.reviews
   end
 
   # GET /users/new
@@ -28,7 +29,8 @@ class UsersController < ApplicationController
     respond_to do |format|
    
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        @user.send_activation_email
+        format.html { redirect_to @user, notice: 'User was successfully created. Please check your email to activate your account.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -40,13 +42,17 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    if @user.update(user_params)
-      flash[:notice] = 'Usuário atualizado com sucesso!'
-      redirect_to @user
-    else
-      flash[:notice] = 'Ocorreu um erro!'
-      render :edit
-    end
+   
+    #respond_to do |format|
+
+      if @user.update(user_params)
+        flash[:notice] = 'Usuário atualizado com sucesso!'
+        redirect_to @user
+      else
+        flash[:notice] = 'Ocorreu um erro!'
+        render :edit
+      end
+    #end
   end
 
   # DELETE /users/1

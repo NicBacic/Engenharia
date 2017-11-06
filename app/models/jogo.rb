@@ -9,12 +9,16 @@ class Jogo < ApplicationRecord
   validates :desenvolvedora, presence: true
   validates :publisher, presence: true
 
+  #has_many :jogos, :through => :jogo_tags
+
   def self.search(term)
     if term
       where('lower(nome) LIKE ?', "%#{term}%".downcase)
       #order('nome ASC')
     else
       order('nome ASC')
+
+
     end
   end
 

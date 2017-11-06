@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:texto).merge(jogo_id: current_jogos.id)
+    params.require(:review).permit(:texto).merge(:jogo_id => current_jogos.id)
   end
 
   private
