@@ -1,15 +1,11 @@
 class JogosController < ApplicationController
-  before_action :set_jogo, only: [:show, :edit, :update, :destroy]
+  before_action :set_jogo, only: %i[show edit update destroy]
 
   # GET /jogos
   # GET /jogos.json
   def index
     @jogos = Jogo.all
-    if params[:term]
-      @jogos = Jogo.search(params[:term]).order("nome ASC")
-    else
-      @jogos = Jogo.all.order('nome ASC')
-    end
+    params[:term] ? @jogos = Jogo.search(params[:term]).order('nome ASC') : @jogos = Jogo.all.order('nome ASC')
   end
 
   # GET /jogos/1
@@ -25,13 +21,11 @@ class JogosController < ApplicationController
   end
 
   # GET /jogos/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /jogos
   # POST /jogos.json
   def create
-    
     @jogo = Jogo.new jogo_params
 
     if @jogo.save
@@ -46,7 +40,6 @@ class JogosController < ApplicationController
   # PATCH/PUT /jogos/1.json
   def update
     @jogo = Jogo.find params[:id]
-    
     if @jogo.update jogo_params
       flash[:notice] = 'Jogo atualizado com sucesso!'
       redirect_to @jogo
@@ -65,13 +58,14 @@ class JogosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_jogo
-      @jogo = Jogo.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def jogo_params
-      params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :rating, :term)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_jogo
+    @jogo = Jogo.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def jogo_params
+    params.require(:jogo).permit(:nome, :publisher, :desenvolvedora, :rating, :term)
+  end
 end
