@@ -2,14 +2,21 @@
 
 <h1>Jogos</h1>
 
+<center>
 
-<%= form_tag(jogos_path, method: :get) do %>
-  <%= text_field_tag :term, params[:term], :id => "search_box" %>
-  <%= submit_tag "Search", nome: nil, :id => "search_button" %>
-<% end %>
+  <%= form_tag(jogos_path, method: :get) do %>
+    <%= text_field_tag :term, params[:term], :id => "search_box" %>
+    <%= submit_tag "Search", nome: nil, :id => "search_button" %>
+  <% end %>
 
 
-<table>
+  <%= link_to "Advanced Search", new_search_path %>
+
+</center>
+
+<br>
+
+<table align="center">
   <thead>
     <tr>
       <th>Nome</th>
