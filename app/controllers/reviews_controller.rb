@@ -4,9 +4,7 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
-  def create
-    
-         
+  def create     
 
     if current_user.present?
       @review = Review.new(review_params_user)

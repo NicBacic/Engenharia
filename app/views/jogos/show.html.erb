@@ -35,6 +35,11 @@
   </select>
 </p>
 
+<% if current_user.present? %>
+  <% if current_user.wishlist != nil %>
+    <%= button_to "Add to List", add_jogo_to_wishlist_path(:jogo_id => @jogo, :wishlist_id => current_user.wishlist), :method => :post, id: :add_to_list_button %>
+  <% end %>
+<% end %>
 
 <%= link_to 'Edit', edit_jogo_path(@jogo) %> |
 
