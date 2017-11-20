@@ -5,6 +5,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Account id:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
@@ -15,9 +20,37 @@
 </p>
 
 <p>
-  <strong>Hashed password:</strong>
-  <%= @user.password_digest %>
+  <strong>Account created at:</strong>
+  <%= @user.created_at %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <strong>Account last modified at:</strong>
+  <%= @user.updated_at %>
+</p>
+
+<p>
+  <strong>Account activated?:</strong>
+  <%= @user.activated %>
+</p>
+
+<p>
+  <strong>Account activated at:</strong>
+  <%= @user.activated_at %>
+</p>
+
+<p>
+  <strong>Wishlist:</strong>
+  <% if @user.wishlist.present? %>
+    <%= link_to 'Wishlist', user_wishlist_path(@user.wishlist.id), id: :wishlist_link %>
+  <% elsif current_user.present? %>
+    <% if current_user.id == @user.id %>
+      <div class = "actions">
+        <%= button_to "Create List", create_wishlist_path, :method => :post %>
+      </div>
+    <% end %> 
+       
+  <% else %>
+    This user has no Wishlist yet
+  <% end %>
+</p>

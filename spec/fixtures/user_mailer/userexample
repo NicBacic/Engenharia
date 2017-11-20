@@ -1,0 +1,6 @@
+userexample:
+  id: 1
+  username: Example Name
+  email: examplename@example.com
+  password_digest: $2a$10$NuWL8f2X0bXaCof3/caiiOwlF2rago7hH10JECmw1p75kEpf0mkie
+  remember_token: YXjPrFfsK8SFQOQDEa90ow
