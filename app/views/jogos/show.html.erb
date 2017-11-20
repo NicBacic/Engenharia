@@ -1,7 +1,12 @@
+<head>
+    <title>Rotten Pxls - <%= @jogo.nome %></title>
+</head>
+
 <p id="notice"><%= notice %></p>
 
 <h2> <%= @jogo.nome %> </h2>
 
+<div class="tab">
 <p>
   <strong>Publisher:</strong>
   <%= @jogo.publisher %>
@@ -73,3 +78,4 @@
     <%= f.submit 'Submit Review'%>
   </div>
 <% end %>
+</div>
