@@ -20,11 +20,6 @@
 </p>
 
 <p>
-  <strong>Hashed password:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
   <strong>Account created at:</strong>
   <%= @user.created_at %>
 </p>
@@ -42,4 +37,20 @@
 <p>
   <strong>Account activated at:</strong>
   <%= @user.activated_at %>
+</p>
+
+<p>
+  <strong>Wishlist:</strong>
+  <% if @user.wishlist.present? %>
+    <%= link_to 'Wishlist', user_wishlist_path(@user.wishlist.id), id: :wishlist_link %>
+  <% elsif current_user.present? %>
+    <% if current_user.id == @user.id %>
+      <div class = "actions">
+        <%= button_to "Create List", create_wishlist_path, :method => :post %>
+      </div>
+    <% end %> 
+       
+  <% else %>
+    This user has no Wishlist yet
+  <% end %>
 </p>

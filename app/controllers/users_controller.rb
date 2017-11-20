@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @reviews = @user.reviews
+    @whilist = @user.wishlist
   end
 
   # GET /users/new
@@ -55,12 +56,31 @@ class UsersController < ApplicationController
     #end
   end
 
+  def create_wishlist
+    @user = current_user
+    @user.wishlist = Wishlist.new
+    reload
+  end
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
     @user.destroy
     flash[:notice] = 'Usuário deletado com sucesso!'
     redirect_to @user
+  end
+
+  def add_jogo_to_wishlist
+    if current_user.present?
+      @user = current_user
+      if @user.wishlist == nil
+        create_wishlist
+      end
+    current_user.add_jogo(params[:jogo_id])
+    redirect_to @user
+    else
+      flash[:error] = "An error has occured! The list you want to add the game is not the list of the current_user! Please try to login again"
+    end
+    
   end
 
   private
@@ -73,4 +93,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :password, :password_digest, :email)
     end
+
 end
