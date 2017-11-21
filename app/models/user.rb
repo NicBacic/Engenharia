@@ -7,7 +7,7 @@ class User < ApplicationRecord
   before_create :create_activation_digest
 
   validates :username, presence: true, uniqueness: true, length: { minimum: 4, maximum: 100 }
-  validates :password, presence: true, length: { minimum: 4, maximum: 100 }
+  validates :password, presence: true, length: { minimum: 4, maximum: 100 }, confirmation: true
   validates :password_digest, presence: true
 
   has_secure_password
