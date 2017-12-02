@@ -3,6 +3,6 @@
 <div class="text-center">
 <%= render 'form', jogo: @jogo %>
 
-<%= link_to 'Show', @jogo %> |
-<%= link_to 'Back', jogos_path %>
+<%= link_to '<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>'.html_safe, @jogo %> |
+<%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, jogos_path %>
 </div>
