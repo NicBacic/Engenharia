@@ -1,17 +1,13 @@
-<head>
-<title>Show Users</title>
-</head>
-
 <p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</h2>
 
 <p>
   <strong>Account id:</strong>
   <%= @user.id %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
 </p>
 
 <p>
@@ -42,14 +38,7 @@
 <p>
   <strong>Wishlist:</strong>
   <% if @user.wishlist.present? %>
-    <%= link_to 'Wishlist', user_wishlist_path(@user.wishlist.id), id: :wishlist_link %>
-  <% elsif current_user.present? %>
-    <% if current_user.id == @user.id %>
-      <div class = "actions">
-        <%= button_to "Create List", create_wishlist_path, :method => :post %>
-      </div>
-    <% end %> 
-       
+    <%= link_to 'Wishlist', user_wishlist_path(@user.wishlist.id), id: :wishlist_link %>       
   <% else %>
     This user has no Wishlist yet
   <% end %>

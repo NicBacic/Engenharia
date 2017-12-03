@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 require 'coveralls'
 Coveralls.wear!
 
@@ -135,24 +136,23 @@ RSpec.describe UsersController, type: :controller do
     fill_in "username_field", :with=> user.username
     fill_in "password_field", :with=> user.password
     find_button("submit_login").click
-    expect(current_path).to eq home_path
+    expect(page).to have_current_path(home_path)
 
     jogo = FactoryBot.create(:jogo)
     
     visit jogos_path
 
-    expect(current_path).to eq jogos_path
+    expect(page).to have_current_path(jogos_path)
 
     visit jogo_path(jogo.id)
 
-    expect(current_path).to eq jogo_path(jogo.id)
-    puts html
+    expect(page).to have_current_path(jogo_path(jogo.id))
 
     find_button('add_to_list_button').click
 
-    expect(user.wishlist.jogo.count).to be > 0
-
-    expect(current_path).to eq(user_path(user.id))
+    expect(user.wishlist.jogo.count).to be 1
+   
+    expect(page).to have_current_path(user_path(user.id))
     
   end
 
@@ -160,29 +160,38 @@ RSpec.describe UsersController, type: :controller do
 
     visit login_path
     #puts html
-    @user = FactoryBot.create(:user)
-    @user.wishlist = Wishlist.new(user_id: @user.id)
+    user = FactoryBot.create(:user)
+    user.wishlist = Wishlist.new(user_id: user.id)
 
-    fill_in "username_field", :with=> @user.username
-    fill_in "password_field", :with=> @user.password
+    fill_in "username_field", :with=> user.username
+    fill_in "password_field", :with=> user.password
     find_button("submit_login").click
-    expect(current_path).to eq home_path
+    expect(page).to have_current_path(home_path)
     
-    current_user = @user
+    current_user = user
+    expect(current_user.username).to eq user.username
 
-    @jogo = FactoryBot.create(:jogo)
+    jogo = FactoryBot.create(:jogo)
     
     #???????????????????????????????????????????? PLEASE REVIEW THIS CODE
-    #controller.add_jogo_to_wishlist
-    
-    #visit users_path
-    #puts html
-    #expect(current_path).to eq user_path(@user.id)
-    
-   
-    #click_link("a#wishlist_link", visible: false)
+    visit jogos_path
 
-    #expect(current_path).to eq user_wishlist_path(@user,@user.wishlist.id)
+    expect(page).to have_current_path(jogos_path)
+
+    visit jogo_path(jogo.id)
+
+    expect(page).to have_current_path(jogo_path(jogo.id))
+    #puts html
+    find_button('add_to_list_button').click
+    #puts html
+    expect(user.wishlist.jogo.count).to be 1
+    
+    expect(page).to have_current_path(user_path(user.id))
+    visit user_wishlist_path(user,user.wishlist.id)
+
+    #puts html
+
+    expect(current_path).to eq user_wishlist_path(user,user.wishlist.id)
 
   end
 
