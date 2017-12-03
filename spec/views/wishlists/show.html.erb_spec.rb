@@ -9,7 +9,7 @@ RSpec.describe "wishlists/show", type: :view do
 
   it "renders attributes in <p>" do
     render
-    expect(rendered).to match /User not found, please check the name and try again/
+    expect(rendered).to match "User not found, please check the name and try again"
 
   end
 end
