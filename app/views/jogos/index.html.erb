@@ -5,19 +5,24 @@
 
 <h1>Jogos</h1>
 
-<div class="input-group search">
-<%= form_tag(jogos_path, method: :get) do %>
-  <div class="input-group">
-  <%= text_field_tag :term, params[:term], :id => "search_box", :class => "form-control input-sm" %>
-  <span class="input-group-btn">
-  <%= submit_tag "Search", nome: nil, :id => "search_button", :class => "btn btn-default btn-sm" %>
-  </span>
-    </div>
-<% end %>
-</div>
 
-</br>
+<center>
 
+  <%= form_tag(jogos_path, method: :get) do %>
+    <%= text_field_tag :term, params[:term], :id => "search_box" %>
+    <%= submit_tag "Search", nome: nil, :id => "search_button" %>
+  <% end %>
+
+
+
+
+  <%= link_to "Advanced Search", new_search_path %>
+
+</center>
+
+<br>
+
+<table align="center">
 <table class="table table-hover table-nonfluid">
   <thead>
     <tr>

@@ -1,0 +1,35 @@
+<h1>Advanced Search<h1>
+
+<%= form_for @search do |s| %>
+
+	<div class="field">
+		<%= s.label :nome %><br />
+		<%= s.text_field :nome %>
+	</div>
+
+	<div class="field">
+		<%= s.label :console %><br />
+		<%= s.select :console, options_for_select(@consoles), :include_blank => true %>
+	</div>
+
+	<div class="field">
+		<%= s.label :desenvolvedora %><br />
+		<%= s.text_field :desenvolvedora %>
+	</div>
+
+	<div class="field">
+		<%= s.label :publisher %><br />
+		<%= s.text_field :publisher %>
+	</div>
+
+<!--
+	<div class="field">
+		<p> <%= s.label :min_rating, "Min Rating" %> - <%= s.text_field :min_rating, size: 10 %> </p>
+		<p> <%= s.label :max_rating, "Max Rating" %> - <%= s.text_field :max_rating, size: 10 %> </p>
+	</div>
+-->
+	<div class="actions"> <%= s.submit "Search", class: "pure-button pure-button-primary" %> </div>
+
+<% end %>
+
+<p> <%= link_to 'Back', jogos_path %> </p>

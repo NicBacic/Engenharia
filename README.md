@@ -14,7 +14,7 @@ O software como serviço desenvolvido nesse projeto pretende funcionar de modo s
 O foco, entretanto, será em jogos. Dessa forma pretendemos desenvolver uma plataforma onde diferentes usuários conseguem compartilhar a experiência que tiveram em diferentes jogos através de reviews, fórums, ratings, entre outras ferramentas. 
 
 # Code Climate
-<a href="https://codeclimate.com/github/NickBacic/Engenharia/maintainability"><img src="https://api.codeclimate.com/v1/badges/22239edcac6c3a1a2232/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/22239edcac6c3a1a2232/maintainability)](https://codeclimate.com/github/NickBacic/Engenharia/maintainability)
 
 # Travis CI
 [![Build Status](https://travis-ci.org/NickBacic/Engenharia.svg?branch=master)](https://travis-ci.org/NickBacic/Engenharia)

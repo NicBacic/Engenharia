@@ -16,8 +16,8 @@ When ("I fill {string} with {string}") do |review_texto, review_name|
   fill_in review_texto,visible: false, :with=> review_name
 end
 
-When ("I confirm my review in {string}") do |review_button|
-  click_button review_button, visible: false
+When ("I confirm my review in {string}") do |btn_submit|
+  click_button btn_submit, visible: false
 end
 
 Then ("the game page should have content {string} written by {string}") do |review_name, username|
