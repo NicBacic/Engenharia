@@ -18,6 +18,18 @@ RSpec.describe Search, type: :model do
     expect(search).to be_valid
   end
 
+  it "is valid without a publisher" do
+    search = FactoryBot.create :search
+    search.publisher = nil
+    expect(search).to be_valid
+  end
+
+  it "is valid without a desenvolvedora" do
+    search = FactoryBot.create :search
+    search.desenvolvedora = nil
+    expect(search).to be_valid
+  end
+
   it "is valid with max_rating greater than 10" do
     search = FactoryBot.create :search
     search.max_rating = 20
@@ -49,6 +61,10 @@ RSpec.describe Search, type: :model do
     expect(search).to be_valid
   end
 
-  
+  it "should return valid search" do
+    jogo = FactoryBot.create :jogo
+    findJogo = Jogo.search("????")
+    expect(findJogo).to_not eq([jogo])
+  end
 
 end
