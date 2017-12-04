@@ -77,15 +77,10 @@
 <%= form_for ([@jogo, @jogo.reviews.build])do |f| %>
   <div class="field">
     <%= f.label :texto %><br />
-<<<<<<< HEAD
-    <%= f.text_area :texto, id: :review_texto %>
-  </div>
-=======
 		<div class="input-group">
     <%= f.text_area :texto, id: :review_texto, class: "form-control input-sm centered-input" %>
 		</div>
   </div><br />
->>>>>>> b47d1becccee956c93e999c48f30074b08e1b858
   <div class="actions">
     <%= f.submit class: 'btn btn-default btn-sm' , id: :btn_submit%>
   </div>
