@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20171118181732) do
   end
 
   create_table "jogos_tags", id: false, force: :cascade do |t|
-    t.integer "jogo_id"
-    t.integer "tag_id"
+    t.integer "jogo_id", null: false
+    t.integer "tag_id", null: false
+    t.index ["jogo_id"], name: "index_jogos_tags_on_jogo_id"
+    t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
   end
 
   create_table "jogos_wishlists", force: :cascade do |t|
@@ -36,6 +38,17 @@ ActiveRecord::Schema.define(version: 20171118181732) do
     t.integer "jogo_id"
     t.integer "user_id"
     t.string "texto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "nome"
+    t.string "console"
+    t.string "publisher"
+    t.string "desenvolvedora"
+    t.decimal "min_rating"
+    t.decimal "max_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

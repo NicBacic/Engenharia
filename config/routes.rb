@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
+  root 'static_pages#home', as: 'home'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
 
+  resources :searches
+
   resources :tags
 
   resources :usuario_avalia_jogos
-  
-  root 'static_pages#home', as: 'home'
 
   get 'static_pages/home'
   get 'static_pages/about'

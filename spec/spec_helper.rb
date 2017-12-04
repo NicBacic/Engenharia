@@ -5,6 +5,7 @@ require 'rspec/rails'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.include Capybara::DSL
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
@@ -38,6 +39,5 @@ RSpec.configure do |config|
   
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
-  config.include Capybara::DSL
 
 end
