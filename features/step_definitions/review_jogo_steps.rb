@@ -12,8 +12,8 @@ When ("I go to Jogo page {string}") do |jogo_name|
   visit jogo_path(jogo.id)
 end
 
-When ("I fill {string} with {string}") do |review_text_area, review_name|
-  fill_in review_text_area,visible: false, :with=> review_name
+When ("I fill {string} with {string}") do |review_texto, review_name|
+  fill_in review_texto,visible: false, :with=> review_name
 end
 
 When ("I confirm my review in {string}") do |review_button|

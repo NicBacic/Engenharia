@@ -47,7 +47,7 @@ end
 When("I should see my personal page") do
   user = @user
   expect(page).to have_current_path(user_path(@user.id))
-  expect(page).to have_content(@user.username)
+  expect(page).to have_content("Account id:")
 end
 
 When("I click the link {string}") do |wishlist_link|
