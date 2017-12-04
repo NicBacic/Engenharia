@@ -7,5 +7,6 @@ Feature: User can review game
     When I go to Jogo page "The Legend of Zelda"
     And I fill "review_text_area" with "This is a review!"
     And I confirm my review in "Submit Review"
+
     Then the game page should have content "This is a review!" written by "User Test"
 
