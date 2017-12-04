@@ -1,0 +1,39 @@
+<h1>Advanced Search Results</h1>
+
+<center> <p> <%= link_to 'Back', new_search_path %> </p> </center>
+
+<% if @search.search_jogos.empty? %>
+	
+	<p> No Records Found </p>
+
+<% else %>
+
+	<table align="center">
+	  <thead>
+	    <tr>
+	      <th>Nome</th>
+	      <th>Publisher</th>
+	      <th>Desenvolvedora</th>
+	      <th>Console</th>
+	      <th>Rating</th>
+	      <th colspan="10"></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @search.search_jogos.each do |jogo| %>
+	      <tr>
+	        <td><%= jogo.nome %></td>
+	        <td><%= jogo.publisher %></td>
+	        <td><%= jogo.desenvolvedora %></td>
+	        <td><%= jogo.console %></td>
+	        <td><%= jogo.rating %></td>
+	        <td><%= link_to 'Show', jogo %></td>
+	        <td><%= link_to 'Edit', edit_jogo_path(jogo) %></td>
+	        <td><%= link_to 'Destroy', jogo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+<% end %>

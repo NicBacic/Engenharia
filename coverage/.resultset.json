@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/nicbacic/ruby/hello_world/app/controllers/jogos_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/jogos_controller.rb": [
         1,
         1,
         null,
@@ -80,7 +80,82 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/controllers/users_controller_spec.rb": [
+      "/home/lucas/Engenharia/spec/controllers/searches_controller_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        3,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/app/controllers/searches_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/controllers/users_controller_spec.rb": [
         1,
         1,
         1,
@@ -280,7 +355,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/users_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -380,7 +455,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/controllers/wishlists_controller_spec.rb": [
+      "/home/lucas/Engenharia/spec/controllers/wishlists_controller_spec.rb": [
         1,
         1,
         1,
@@ -403,7 +478,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/wishlists_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/wishlists_controller.rb": [
         1,
         null,
         1,
@@ -473,7 +548,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/mailers/user_mailer_spec.rb": [
+      "/home/lucas/Engenharia/spec/mailers/user_mailer_spec.rb": [
         1,
         null,
         null,
@@ -508,7 +583,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/models/jogo_spec.rb": [
+      "/home/lucas/Engenharia/spec/models/jogo_spec.rb": [
         1,
         null,
         1,
@@ -573,7 +648,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/jogo.rb": [
+      "/home/lucas/Engenharia/app/models/jogo.rb": [
         1,
         null,
         1,
@@ -589,8 +664,8 @@
         1,
         null,
         1,
-        2,
-        2,
+        3,
+        3,
         null,
         null,
         0,
@@ -601,38 +676,14 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/application_record.rb": [
+      "/home/lucas/Engenharia/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/spec/models/wishlist_spec.rb": [
+      "/home/lucas/Engenharia/spec/models/search_spec.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/app/models/wishlist.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/spec/routing/users_routing_spec.rb": [
-        1,
-        null,
-        1,
         1,
         null,
         1,
@@ -641,45 +692,60 @@
         null,
         1,
         1,
-        null,
-        null,
         1,
         1,
         null,
         null,
         1,
         1,
-        null,
-        null,
         1,
         1,
         null,
         null,
         1,
         1,
-        null,
-        null,
         1,
         1,
         null,
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/nicbacic/ruby/hello_world/spec/views/wishlists/show.html.erb_spec.rb": [
+        1,
         1,
         null,
+        null,
+        1,
         1,
         1,
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         1,
@@ -687,7 +753,108 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/sessions_controller.rb": [
+      "/home/lucas/Engenharia/app/models/search.rb": [
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/models/wishlist_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/app/models/wishlist.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/routing/users_routing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/spec/views/wishlists/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/lucas/Engenharia/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -714,7 +881,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/user.rb": [
+      "/home/lucas/Engenharia/app/models/user.rb": [
         1,
         null,
         1,
@@ -797,7 +964,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/controllers/static_pages_controller.rb": [
+      "/home/lucas/Engenharia/app/controllers/static_pages_controller.rb": [
         1,
         1,
         null,
@@ -812,7 +979,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/models/review.rb": [
+      "/home/lucas/Engenharia/app/models/review.rb": [
         1,
         1,
         1,
@@ -820,7 +987,7 @@
         1,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/mailers/user_mailer.rb": [
+      "/home/lucas/Engenharia/app/mailers/user_mailer.rb": [
         1,
         null,
         null,
@@ -845,7 +1012,7 @@
         null,
         null
       ],
-      "/home/nicbacic/ruby/hello_world/app/mailers/application_mailer.rb": [
+      "/home/lucas/Engenharia/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
@@ -853,6 +1020,6 @@
         null
       ]
     },
-    "timestamp": 1512335420
+    "timestamp": 1512350443
   }
 }

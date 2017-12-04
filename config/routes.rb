@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
+  resources :searches
+
   resources :tags
 
   resources :usuario_avalia_jogos
