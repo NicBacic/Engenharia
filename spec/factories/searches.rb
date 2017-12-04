@@ -5,6 +5,6 @@ FactoryBot.define do
     publisher "Nintendo"
     desenvolvedora "Nintendo EPD"
     min_rating "0"
-    max_rating "9.99"
+    max_rating "10"
   end
 end
