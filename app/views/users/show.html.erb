@@ -1,8 +1,9 @@
-<head>
-<title>Show Users</title>
-</head>
-
 <p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</h2>
 
 <p>
   <strong>Account id:</strong>
@@ -10,18 +11,8 @@
 </p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Hashed password:</strong>
-  <%= @user.password_digest %>
 </p>
 
 <p>
@@ -42,4 +33,13 @@
 <p>
   <strong>Account activated at:</strong>
   <%= @user.activated_at %>
+</p>
+
+<p>
+  <strong>Wishlist:</strong>
+  <% if @user.wishlist.present? %>
+    <%= link_to 'Wishlist', user_wishlist_path(@user.wishlist.id), id: :wishlist_link %>       
+  <% else %>
+    This user has no Wishlist yet
+  <% end %>
 </p>

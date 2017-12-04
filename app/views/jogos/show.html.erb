@@ -1,7 +1,12 @@
+<head>
+    <title>Rotten Pxls - <%= @jogo.nome %></title>
+</head>
+
 <p id="notice"><%= notice %></p>
 
 <h2> <%= @jogo.nome %> </h2>
 
+<div class="tab">
 <p>
   <strong>Publisher:</strong>
   <%= @jogo.publisher %>
@@ -35,6 +40,13 @@
   </select>
 </p>
 
+<% if current_user.present? %>
+  <% if current_user.wishlist != nil %>
+    <%= button_to "Add to List", add_jogo_to_wishlist_path(:jogo_id => @jogo, :wishlist_id => current_user.wishlist), :method => :post, id: :add_to_list_button %>
+  <% end %>
+<% elsif %>
+  <br> Login to Add this game to your wishlist </br>
+<% end %>
 
 <%= link_to 'Edit', edit_jogo_path(@jogo) %> |
 
@@ -68,3 +80,4 @@
     <%= f.submit 'Submit Review'%>
   </div>
 <% end %>
+</div>

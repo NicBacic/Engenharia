@@ -6,6 +6,7 @@ end
 
 When("I go to Login page {string}") do |string|
   visit login_path
+  expect(current_path).to eq login_path
 end
 
 When("I fill {string} with {string} and {string} with {string}") do |string, user_name, string2, password|

@@ -3212,33 +3212,3 @@ Jogo.create!([
 
 
 p "Created #{Jogo.count} jogos"
-
-Tag.destroy_all
-
-Tag.create!([
-  {
-  name: "First-person shooter",
-  description: "Shooter em primeira pessoa"
-  },
-  {
-  name: "Third-person shooter",
-  description: "Shooter em terceira pessoa"
-  },
-  {
-  name: "Platform",
-  description: "Jogo de plataforma"
-  }
-])
-
-p "Created #{Tag.count} tags"
-
-#Jogos_tags.destroy_all
-
-Jogos_tags.create!([
-  {
-    jogo_id: 1,
-    tag_id: 1
-    }
-  ])
-
-p "Created #{Jogos_tags.count} jogos_tags"

@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_secure_password
   has_many :usuarioAvaliaJogos
   has_many :reviews
+  has_one  :wishlist
 
   # Activates an account.
   def activate
@@ -58,6 +59,11 @@ class User < ApplicationRecord
   # Returns true if a password reset has expired.
   def password_reset_expired?
     reset_sent_at < 24.hours.ago
+  end
+
+  def add_jogo(jogo_id)
+    wishlist.jogo << Jogo.find(jogo_id)
+    save
   end
 
   private
