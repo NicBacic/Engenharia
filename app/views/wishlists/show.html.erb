@@ -1,0 +1,25 @@
+<head>
+<title>Wishlist</title>
+</head>
+
+<p id="notice"><%= notice %></p>
+
+  <h1>Wishlist de  <% if @user != nil %> <%= @user.username %> </h1>
+
+
+  <% if @user.wishlist.jogo.present? %>
+	<% @user.wishlist.jogo.each do |jogo| %>
+	  <p>
+            Nome: <%= jogo.nome %>
+	  </p>
+	<% end %>
+  <% elsif current_user.present? %>
+    <% if current_user == @user.id %>
+      <p>Você não possui jogos ainda. Vá na sessão de <%= link_to 'jogos', jogos_path %> e adicione seus jogos</p>
+    <% end %>
+  <% else %>
+    <p> Este usuário não possui jogos ainda </p>
+  <% end %>
+<% else %>
+<p>User not found, please check the name and try again.</p>
+<% end %>

@@ -4,11 +4,13 @@ one:
   nome: MyString
   publisher: MyString
   desenvolvedora: MyString
+  console: MyString
   rating: 1.5
 
 two:
   nome: MyString
   publisher: MyString
   desenvolvedora: MyString
+  console: MyString
   rating: 1.5
 
