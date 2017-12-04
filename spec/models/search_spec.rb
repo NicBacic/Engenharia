@@ -6,4 +6,16 @@ RSpec.describe Search, type: :model do
     expect(FactoryBot.create :search).to be_valid
   end
 
+  it "is valid without a console" do
+    search = FactoryBot.create :search
+    search.console = nil
+    expect(search).to be_valid
+  end
+
+  it "is valid without a nome" do
+    search = FactoryBot.create :search
+    search.nome = nil
+    expect(search).to be_valid
+  end
+
 end
