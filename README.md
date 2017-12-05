@@ -20,7 +20,7 @@ O foco, entretanto, será em jogos. Dessa forma pretendemos desenvolver uma plat
 [![Build Status](https://travis-ci.org/NickBacic/Engenharia.svg?branch=master)](https://travis-ci.org/NickBacic/Engenharia)
 
 # Coveralls
-[![Coverage Status](https://coveralls.io/repos/github/NickBacic/Engenharia/badge.svg?branch=master)](https://coveralls.io/github/NickBacic/Engenharia?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/NickBacic/Engenharia/badge.svg?branch=master)](https://coveralls.io/github/NickBacic/Engenharia?branch=master) (<-- Por alguma razão a badge do coveralls pode ficar travada em um número que não é a verdadeira cobertura. Clique na badge para ver a cobertura real)
 
 # Heroku Novo:
 https://engenharia-ach2006.herokuapp.com/
