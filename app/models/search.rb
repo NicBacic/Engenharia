@@ -1,5 +1,12 @@
 class Search < ApplicationRecord
 
+  validates :nome, presence: false
+  validates :desenvolvedora, presence: false
+  validates :publisher, presence: false
+  validates :console, presence: false
+  validates :min_rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}, allow_blank: true
+  validates :max_rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}, allow_blank: true
+
   def search_jogos
 
     jogos = Jogo.all
@@ -10,8 +17,8 @@ class Search < ApplicationRecord
     jogos = jogos.where("desenvolvedora LIKE ?", "%#{desenvolvedora}%") if desenvolvedora.present?
     #jogos = jogos.where("rating >= ?", min_rating) if min_rating.present?
     #jogos = jogos.where("rating <= ?", max_rating) if max_rating.present?
-
-    return jogos
+   
+    return jogos.sort_by{ |h| h[:nome]}
 
   end
 
