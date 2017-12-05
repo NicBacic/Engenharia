@@ -48,7 +48,7 @@
 <h3> Avalie este jogo! </h3>
 <%= form_for ([@jogo, @jogo.usuarioAvaliaJogos.build]) do |f| %>
   <%= f.label :nota %><br>
-  <%= f.select :avaliacao, [ "1 - PureTrash", "2 - Horrible", "3 - Very Bad", "4 - Bad", "5 - Average",
+  <%= f.select [ "1 - PureTrash", "2 - Horrible", "3 - Very Bad", "4 - Bad", "5 - Average",
                              "6 - FIne", "7 - Good", "8 - Very Good", "9 - Great", "10 - Masterpiece" ], :prompt => 'Select One' %>
   <%= f.submit "Submeter avaliação" %>
 <% end %>

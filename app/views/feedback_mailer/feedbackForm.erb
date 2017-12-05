@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <head>
+    <title>Ajude-nos a melhorar!</title>
+    </head>
+    <h1>Por favor, se tiver qualquer comentário a respeito de nossos serviços, deixe-nos saber!</h1>
+    <p></p>
+  </body>
+</html>
+
+<%= render form do |f| %>
+
+    <%= f.select(:priority, ['Bug', 'Recomendação'], @user.titulo = :selected) %>
+
+    <p> Descreva aqui o bug encontrado ou sua recomendação </p>
+
+    <p class="field">
+      <%= f.label :texto %>
+      <%= f.text_field :texto%>
+    </p>
+
+    <p class="actions">
+      <%= f.submit %>
+    </p>
+
+<% end %>

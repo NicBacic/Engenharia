@@ -1,8 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
   default from: 'rottenpxls@gmail.com'
   layout 'mailer'
 

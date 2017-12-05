@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get '/usuario_avalia_jogos/new'
   #get '/reviews/new'
 
+  get '/users/feedback'
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
