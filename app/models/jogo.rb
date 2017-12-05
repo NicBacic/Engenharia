@@ -7,6 +7,8 @@ class Jogo < ApplicationRecord
   validates :nome, presence: true
   validates :desenvolvedora, presence: true
   validates :publisher, presence: true
+  validates :console, presence: false
+
   has_many :usuarioAvaliaJogos
   has_many :reviews
 

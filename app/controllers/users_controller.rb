@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @reviews = @user.reviews
+    @whilist = @user.wishlist
   end
 
   # GET /users/new
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
    
       if @user.save
         @user.send_activation_email
+        create_wishlist
         format.html { redirect_to @user, notice: 'User was successfully created. Please check your email to activate your account.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -55,12 +57,31 @@ class UsersController < ApplicationController
     #end
   end
 
+  def create_wishlist
+    @user.wishlist = Wishlist.new
+  end
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
     @user.destroy
     flash[:notice] = 'Usuário deletado com sucesso!'
     redirect_to @user
+  end
+
+  def add_jogo_to_wishlist
+    if current_user.present?
+      @user = current_user
+      jogoWish = @user.wishlist.jogo.find_by('jogo_id == ?', params[:jogo_id])
+      if jogoWish
+        flash[:error] = "Esse jogo já foi adicionado a sua lista!"
+      else
+        current_user.add_jogo(params[:jogo_id])
+        redirect_to @user
+      end
+    else
+      flash[:error] = "You must be logged to add the game! Please relog and try again. If already done that, please report the bug to us."
+    end
+    
   end
 
   private
@@ -71,6 +92,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :password, :password_digest, :email)
+      params.require(:user).permit(:username, :password, :password_digest, :email, :wishlist)
     end
+
 end

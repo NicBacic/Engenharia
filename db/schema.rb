@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104004132) do
+ActiveRecord::Schema.define(version: 20171118181732) do
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
@@ -29,10 +29,26 @@ ActiveRecord::Schema.define(version: 20171104004132) do
     t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
   end
 
+  create_table "jogos_wishlists", force: :cascade do |t|
+    t.integer "wishlist_id"
+    t.integer "jogo_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer "jogo_id"
     t.integer "user_id"
     t.string "texto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "nome"
+    t.string "console"
+    t.string "publisher"
+    t.string "desenvolvedora"
+    t.decimal "min_rating"
+    t.decimal "max_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,6 +78,12 @@ ActiveRecord::Schema.define(version: 20171104004132) do
     t.integer "id_user"
     t.integer "id_jogo"
     t.integer "avaliacao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
