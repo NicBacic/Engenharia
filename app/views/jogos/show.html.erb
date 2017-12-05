@@ -18,7 +18,7 @@
       <strong>Desenvolvedora:</strong>
       <%= @jogo.desenvolvedora %>
     </p>
-    
+
     <p>
       <strong>Rating:</strong>
       <% nota = @jogo.usuarioAvaliaJogos.average(:avaliacao) %>
@@ -27,8 +27,9 @@
       <% else%>
           <%= nota %>
       <% end %>
+      <% @jogo.rating = nota %>
+      <% @jogo.save %>
     </p>
-
 
   <% if current_user.present? %>
       <% if current_user.wishlist != nil %>
@@ -45,12 +46,12 @@
 <h3> Avalie este jogo! </h3>
 <%= form_for ([@jogo, @jogo.usuarioAvaliaJogos.build]) do |f| %>
   <%= f.label :nota %><br>
-  <%= f.select [ "1 - PureTrash", "2 - Horrible", "3 - Very Bad", "4 - Bad", "5 - Average",
+  <%= f.select :avaliacao, [ "1 - PureTrash", "2 - Horrible", "3 - Very Bad", "4 - Bad", "5 - Average",
                              "6 - FIne", "7 - Good", "8 - Very Good", "9 - Great", "10 - Masterpiece" ], :prompt => 'Select One' %>
   <%= f.submit "Submeter avaliação" %>
 <% end %>
 
-
+<% if false %>
   <h3>Avaliações</h3>
   <% if @jogo.present? %>
       <% @jogo.usuarioAvaliaJogos.each do |usuario_avalia_jogo| %>
@@ -60,7 +61,7 @@
           </p>
       <% end %>
   <% end %>
-
+<% end %>
 
 <h3>Reviews</h3>
 <% if @jogo.present? %>

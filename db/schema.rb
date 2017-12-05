@@ -16,17 +16,10 @@ ActiveRecord::Schema.define(version: 20171118181732) do
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
-    t.decimal "nota"
+    t.decimal "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "console"
-  end
-
-  create_table "jogos_tags", id: false, force: :cascade do |t|
-    t.integer "jogo_id", null: false
-    t.integer "tag_id", null: false
-    t.index ["jogo_id"], name: "index_jogos_tags_on_jogo_id"
-    t.index ["tag_id"], name: "index_jogos_tags_on_tag_id"
   end
 
   create_table "jogos_wishlists", force: :cascade do |t|
@@ -49,13 +42,6 @@ ActiveRecord::Schema.define(version: 20171118181732) do
     t.string "desenvolvedora"
     t.decimal "min_rating"
     t.decimal "max_rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
