@@ -4,6 +4,20 @@ require 'coveralls'
 
 RSpec.describe WishlistsController, type: :controller do
 
+  let(:valid_attributes) {
+    {
+      user_id:1
+    }
+  }
+
+  let(:invalid_attributes) {
+    {
+      user_id: "???"
+    }
+  }
+
+  let(:valid_session) { {} }
+
   scenario "Creating a wishlist for a user" do
     user = FactoryBot.create :user
     user.wishlist = Wishlist.new(user_id: user.id)
@@ -16,6 +30,5 @@ RSpec.describe WishlistsController, type: :controller do
     expect(expected_wishlist.user_id).to eq expected_wishlist.user_id
 
   end
-
 
 end
