@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171118181732) do
     t.string "nome"
     t.string "publisher"
     t.string "desenvolvedora"
-    t.decimal "rating"
+    t.decimal "nota"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "console"
