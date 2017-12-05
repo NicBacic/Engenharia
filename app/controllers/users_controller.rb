@@ -23,12 +23,22 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def feedback
+    @titulo
+    @texto
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = current_user
+    end
+  end
+
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
     respond_to do |format|
-   
+
       if @user.save
         @user.send_activation_email
         create_wishlist

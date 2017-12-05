@@ -1,6 +1,9 @@
 class Jogo < ApplicationRecord
 
   has_many :jogo_tags
+  has_many :usuarioAvaliaJogos
+  has_many :reviews
+
   #has_many :jogos, :through => :jogo_tags
 
   validates :rating, numericality: {greater_than: -1, less_than_or_equal_to: 10}, allow_blank: true 
@@ -9,9 +12,6 @@ class Jogo < ApplicationRecord
   validates :publisher, presence: true
   validates :console, presence: false
 
-  has_many :usuarioAvaliaJogos
-  has_many :reviews
-
   def self.search(term)
     if term
       where('lower(nome) LIKE ?', "%#{term}%".downcase)
@@ -19,7 +19,7 @@ class Jogo < ApplicationRecord
     else
       order('nome ASC')
 
-    
+
     end
   end
 
