@@ -1,5 +1,12 @@
-<h1>New Usuario Avalia Jogo</h1>
+<h1> Add avaliacao </h1>
+<%= form_for :usuario_avalia_jogos, url: usuario_avalia_jogos_path do |f| %>
 
-<%= render 'form', usuario_avalia_jogo: @usuario_avalia_jogo %>
+    <p class="field">
+      <%= f.label :Avaliação %>
+      <%= f.select :from, [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ], :prompt => 'Select One' %>
+    </p>
 
-<%= link_to 'Back', usuario_avalia_jogos_path %>
+    <p class="actions">
+      <%= f.submit %>
+    </p>
+<% end %>
