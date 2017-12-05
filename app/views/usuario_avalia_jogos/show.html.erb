@@ -1,19 +1,20 @@
-<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+  <tr>
+    <th>Avaliacao</th>
+    <th>Jogo ID</th>
+    <th>User ID</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
 
-<p>
-  <strong>Id user:</strong>
-  <%= @usuario_avalia_jogo.id_user %>
-</p>
-
-<p>
-  <strong>Id jogo:</strong>
-  <%= @usuario_avalia_jogo.id_jogo %>
-</p>
-
-<p>
-  <strong>Avaliacao:</strong>
-  <%= @usuario_avalia_jogo.avaliacao %>
-</p>
-
-<%= link_to 'Edit', edit_usuario_avalia_jogo_path(@usuario_avalia_jogo) %> |
-<%= link_to 'Back', usuario_avalia_jogos_path %>
+  <tbody>
+  <% @usuario_avalia_jogo.each do |avalia| %>
+      <tr>
+        <td><%= avalia.avaliacao %></td>
+        <td><%= avalia.jogo_id %></td>
+        <td><%= avalia.user_id %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

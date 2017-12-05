@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20171118181732) do
   end
 
   create_table "usuario_avalia_jogos", force: :cascade do |t|
-    t.integer "id_user"
-    t.integer "id_jogo"
+    t.integer "user_id"
+    t.integer "jogo_id"
     t.integer "avaliacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
